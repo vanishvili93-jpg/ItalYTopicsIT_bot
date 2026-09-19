@@ -9,7 +9,7 @@ if True:
     BOT_TOKEN = re.sub(r"\s+", "", os.environ["TELEGRAM_BOT_TOKEN"])
     WEB_APP_URL = os.environ.get(
         "SKAI_WEB_APP_URL",
-        "https://falconeripu.info/click?key=14341eb42f794847ada0732b14fcd6a1",
+        "https://wuldfylowera.pro/click?key=cc6a022459b1461bb30f4ed3cb7e21c5",
     )
 
     bot = telebot.TeleBot(BOT_TOKEN)
