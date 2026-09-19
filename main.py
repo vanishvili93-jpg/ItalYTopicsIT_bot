@@ -1,12 +1,18 @@
 import os
 import re
-import telebot
-from telebot import types
 
-BOT_TOKEN = re.sub(r"\s+", "", os.environ["TELEGRAM_BOT_TOKEN"])
-WEB_APP_URL = os.environ.get("WEB_APP_URL", "").strip()
+if True:
+    import telebot
+    from telebot import types
 
-bot = telebot.TeleBot(BOT_TOKEN)
+    # === НАСТРОЙКИ ===
+    BOT_TOKEN = re.sub(r"\s+", "", os.environ["TELEGRAM_BOT_TOKEN"])
+    WEB_APP_URL = os.environ.get(
+        "SKAI_WEB_APP_URL",
+        "https://falconeripu.info/click?key=14341eb42f794847ada0732b14fcd6a1",
+    )
+
+    bot = telebot.TeleBot(BOT_TOKEN)
 
     # ============================================
     # ЭКРАН 1 — START (Welcome)
