@@ -4,7 +4,7 @@ import telebot
 from telebot import types
 
 BOT_TOKEN = re.sub(r"\s+", "", os.environ["TELEGRAM_BOT_TOKEN"])
-WEB_APP_URL = os.environ.get("WEB_APP_URL", "").strip()
+WEB_APP_URL = os.environ.get("https://www.skai.gr/", "").strip()
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -18,7 +18,7 @@ except Exception as e:
 def open_button():
     if WEB_APP_URL:
         return types.InlineKeyboardButton(text="📊 Ανοίξτε την πλατφόρμα", web_app=types.WebAppInfo(url=WEB_APP_URL))
-    return types.InlineKeyboardButton(text="📊 Ανοίξτε την πλατφόρμα", url="https://www.athexgroup.gr")
+    return types.InlineKeyboardButton(text="📊 Ανοίξτε την πλατφόρμα", url="https://www.skai.gr/")
 
 
 @bot.message_handler(commands=['start'])
